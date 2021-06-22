@@ -14126,16 +14126,6 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^16.14.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
-  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
-
 react-dom@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
@@ -14145,6 +14135,15 @@ react-dom@^16.8.6:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-dom@^18.0.0-alpha-568dc3532:
+  version "18.0.0-alpha-568dc3532"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-alpha-568dc3532.tgz#b4575d5f7fbdfb83db2c06bee4ab4040f16fb44e"
+  integrity sha512-Q8eeLund7J6r7nrYprr4/4Dr3QtfQ3O8bHtEDc1GDUu3JkKZu5/rTCITvdcHcs0QUKBDlfn/x2mBosRbBkB27A==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "0.21.0-alpha-568dc3532"
 
 react-error-overlay@^6.0.9:
   version "6.0.9"
@@ -14397,15 +14396,6 @@ react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^16.14.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-
 react@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -14414,6 +14404,14 @@ react@^16.8.6:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+react@^18.0.0-alpha-568dc3532:
+  version "18.0.0-alpha-568dc3532"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-alpha-568dc3532.tgz#7b66ca7b68f9ee65751211601bfe52541bee33a2"
+  integrity sha512-0mBgt3ILZoV1JQ5bohwI0vfyYxChmmY1u9g7Wg4ObnDci+nGrgtOAxRgyQMGYhV9da7yWgsIVJiKJFVFgVIVdA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -15198,6 +15196,14 @@ saxes@^5.0.1:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
+
+scheduler@0.21.0-alpha-568dc3532:
+  version "0.21.0-alpha-568dc3532"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-alpha-568dc3532.tgz#e7c0c17df9b48f60795b42c4f282c310553b43e1"
+  integrity sha512-FvCPovtnBwPuN37Gw8FiODNoi6VLZb60IuotEyZTv11mTg7nDRIswG6SP3Gep193CHBN6Et8GHt6oVX6yoRUDg==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 scheduler@^0.19.1:
   version "0.19.1"
