@@ -2,6 +2,8 @@ import React, { useRef, useState, useTransition } from 'react';
 import { Grid, Typography, useTheme } from '@material-ui/core';
 import { withContentRect } from 'react-measure';
 import * as d3 from 'd3';
+import { observable, action } from 'mobx';
+import { observer } from 'mobx-react-lite';
 
 import AssociationTooltip from './AssociationTooltip';
 import { colorRange } from '../../constants';
@@ -84,11 +86,15 @@ function ClassicAssociationsBubbles({
   measureRef,
   contentRect,
 }) {
-  const [minScore, setMinScore] = useState(0.1);
+  const [s] = useState(() =>
+    observable({
+      minScore: 0.1,
+    })
+  );
   const [isPending, startTransition] = useTransition();
   const svgRef = useRef(null);
   const theme = useTheme();
-  const assocs = associations.filter(assoc => assoc.score >= minScore);
+  const assocs = associations.filter(assoc => assoc.score >= s.minScore);
   const { width: size } = contentRect.bounds;
 
   const hierarchicalData = buildHierarchicalData(assocs, idToDisease);
@@ -107,12 +113,12 @@ function ClassicAssociationsBubbles({
         filenameStem={`${symbol}-associated-diseases-bubbles`}
       >
         <Slider
-          defaultValue={minScore}
-          onChange={(_, val) => {
+          defaultValue={s.minScore}
+          onChange={action((_, val) => {
             startTransition(() => {
-              setMinScore(val);
+              s.minScore = val;
             });
-          }}
+          })}
         />
         <Grid
           item
@@ -213,7 +219,7 @@ function ClassicAssociationsBubbles({
               </svg>
             ) : (
               <Typography>
-                No associations with score greater than or equal to {minScore}
+                No associations with score greater than or equal to {s.minScore}
               </Typography>
             )
           ) : null}
@@ -224,4 +230,4 @@ function ClassicAssociationsBubbles({
   );
 }
 
-export default withContentRect('bounds')(ClassicAssociationsBubbles);
+export default withContentRect('bounds')(observer(ClassicAssociationsBubbles));
